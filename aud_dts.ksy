@@ -1,9 +1,11 @@
 meta:
   id: aud_dts
   file-extension: aud
-  endian: le seq:
+  endian: le
+seq:
   - id: header
-    type: header types:
+    type: header
+types:
  bcd1:
     seq:
       - id: b1
@@ -16,7 +18,7 @@ meta:
       as_int:
         value: >
           digit1 +
-          digit2 * 10
+          digit2 * 10 
  header:
   seq:
   - id: title
@@ -33,7 +35,7 @@ meta:
     size: 6
   - id: unknown
     type: u4
-  - id: numero_bobine
+  - id: reel_number
     type: u2
   - id: serial
     type: u2
@@ -55,6 +57,3 @@ meta:
     type: bcd1
   - id: duration_hour
     type: bcd1
-  
-  
-  
